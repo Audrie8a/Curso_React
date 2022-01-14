@@ -1,5 +1,6 @@
 import React from "react";
-import Card from "../components/Card";
+import Boton from "../components/Boton";
+import ExerciseList from "../components/ExerciseList";
 import Welcome from "../components/Welcome";
 
 class Exercises extends React.Component {
@@ -39,18 +40,9 @@ class Exercises extends React.Component {
       <div>
         <Welcome username="Audrie" />
 
-        {/* ngFor Recorre el state */}
-        {this.state.data.map((exercise) => {
-          return (
-            <Card
-              title={exercise.title}
-              description={exercise.description}
-              img={exercise.img}
-              leftColor={exercise.leftColor}
-              rightColor={exercise.rightColor}
-            />
-          );
-        })}
+        <ExerciseList exercises={this.state.data} />
+
+        <Boton dir="/exercise/new" />
       </div>
     );
   }
