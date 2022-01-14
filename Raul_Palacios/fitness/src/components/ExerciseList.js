@@ -1,7 +1,8 @@
 import React from "react";
 import Card from "./Card";
+import CardUsrs from "./CardUsrs";
 
-const ExerciseList = ({ exercises }) => (
+const ExerciseList = ({ exercises, prueba }) => (
   <div>
     {/* ngFor Recorre el state */}
     {exercises.map((exercise) => {
@@ -16,6 +17,18 @@ const ExerciseList = ({ exercises }) => (
         />
       );
     })}
+    <div>
+      <h1>Prueba Listar con fetch</h1>
+      {prueba.map((prue) => {
+        return (
+          <CardUsrs
+            key={prue.id}
+            title={prue.title}
+            thumbnailUrl={prue.thumbnailUrl}
+          />
+        );
+      })}
+    </div>
   </div>
 );
 

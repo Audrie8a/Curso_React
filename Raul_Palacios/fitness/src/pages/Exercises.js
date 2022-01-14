@@ -4,7 +4,7 @@ import ExerciseList from "../components/ExerciseList";
 import Welcome from "../components/Welcome";
 
 class Exercises extends React.Component {
-  state = {
+  stateEx = {
     data: [
       {
         id: 1,
@@ -32,12 +32,34 @@ class Exercises extends React.Component {
       },
     ],
   };
+
+  state = {
+    data: [],
+    loading: true,
+    error: null,
+  };
+
+  async componentDidMount() {
+    await this.fetchPrueba();
+  }
+
+  fetchPrueba = async () => {
+    try {
+      let res = await fetch("https://jsonplaceholder.typicode.com/photos");
+      const data = await res.json();
+      this.setState({
+        data,
+        loading: false,
+      });
+    } catch (error) {}
+  };
+
   render() {
     return (
       <div>
         <Welcome username="Audrie Ochoa" />
 
-        <ExerciseList exercises={this.state.data} />
+        <ExerciseList exercises={this.stateEx.data} prueba={this.state.data} />
 
         <Boton dir="/exercise/new" />
       </div>
