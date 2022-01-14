@@ -1,24 +1,86 @@
 import React from "react";
-import Boton from "../components/Boton";
 
 class ExercisesNew extends React.Component {
-  //Agregar props a una función mediante el constructor
-  // constructor(props) {
-  //   super(props);
-  //   this.handleClick = this.handleClick.bind(this); //Esta función no es una función de flecha
-  // }
+  state = {};
+  handleChange = (e) => {
+    // console.log(`${e.target.name}: ${e.target.value}`);
+    // let partialState = {};
+    // partialState[e.target.name] = e.target.value;
+    // this.setState(partialState);
 
-  //Eventos empiezan con handle
-  handleClick = () => {
-    alert("Click!");
-    console.log(this);
+    this.setState({
+      [e.target.name]: e.target.value,
+    });
   };
+
+  handleSubmit = (e) => {
+    //Evitar recargar al enviar información
+    e.preventDefault();
+
+    console.log(this.state);
+  };
+
   render() {
     return (
-      <div>
-        <h1>ExercisesNew</h1>
-        <button onClick={this.handleClick}>Click aquí!</button>
-        <Boton dir="/exercise" />
+      <div className="container">
+        <form onSubmit={this.handleSubmit}>
+          <div className="form-group">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="title"
+              name="title"
+              onChange={this.handleChange}
+              value={this.state.title}
+            />
+          </div>
+          <div className="form-group">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="description"
+              name="description"
+              onChange={this.handleChange}
+              value={this.state.description}
+            />
+          </div>
+          <div className="form-group">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="img"
+              name="img"
+              onChange={this.handleChange}
+              value={this.state.img}
+            />
+          </div>
+          <div className="form-row">
+            <div className="col">
+              <input
+                type="text"
+                className="form-control"
+                placeholder="leftColor"
+                name="leftColor"
+                onChange={this.handleChange}
+                value={this.state.leftColor}
+              />
+            </div>
+            <div className="col">
+              <input
+                type="text"
+                className="form-control"
+                placeholder="rightColor"
+                name="rightColor"
+                onChange={this.handleChange}
+                value={this.state.rightColor}
+              />
+            </div>
+          </div>
+
+          <button type="submit" className="btn btn-primary">
+            Submit
+          </button>
+        </form>
       </div>
     );
   }
