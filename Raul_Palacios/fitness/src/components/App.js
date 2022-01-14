@@ -5,7 +5,7 @@ import Exercises from "../pages/Exercises";
 import ExercisesNew from "../pages/ExercisesNew";
 import NotFound from "../pages/NotFound";
 
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
       <Routes>
@@ -15,6 +15,6 @@ function App() {
       </Routes>
     </BrowserRouter>
   );
-}
+};
 
 export default App;
