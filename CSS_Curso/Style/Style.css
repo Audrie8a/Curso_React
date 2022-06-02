@@ -1,0 +1,63 @@
+body {
+  font-size: 12px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: red
+}
+
+
+p a {
+  color: green;
+  font-size: 30px;
+}
+
+a[href="#"] {
+  font-size: 55px;
+}
+
+div {
+  font-size: 16px;
+}
+
+div p {
+  font-size: 2em;
+}
+
+div label {
+  font-size: 2rem;
+  color: orange;
+}
+
+.Cajita {
+  /* rgba da opacacidad a los colores, 0 es muy opaco, 1 es normal */
+  background: rgba(120, 29, 66, 0.2);
+}
+
+.Contenedores h1,
+.Contenedores label,
+.Contenedores p {
+  font-size: medium;
+  color: black
+}
+
+
+/* padding: margen interno
+   margin: margen externo */
+.Contenedores {
+  width: 500px;
+  height: 300px;
+  background: blueviolet;
+  /* 50px -> arriba/abajo
+     20px -> izq/der */
+  margin: 50px, 20px;
+}
+
+/*  px -> tamaño absoluto
+    em -> tamaño relativo al padre más cercano
+    rem -> tamaño relativo al body */

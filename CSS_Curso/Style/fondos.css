@@ -1,0 +1,25 @@
+/* body {
+  background: url("https://getwallpapers.com/wallpaper/full/f/8/c/573277.jpg");
+  color: white;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* Fixed o scroll: Sirven para adaptar el fondo de pantalla al contenido  
+}
+
+*/
+
+
+div {
+  background: url(https://getwallpapers.com/wallpaper/full/f/8/c/573277.jpg);
+  color: white;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  /* 500px : Modifica distancia desde 0px hacia la derecha 
+     200px : Modifica distancia desde 0px hacia abajo*/
+  background-position: 500px 200px;
+}
+
+div h1 {
+  padding: 200px 500px;
+}
