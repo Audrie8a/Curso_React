@@ -14,7 +14,6 @@ div {
   color: white;
   height: 300px;
   background-repeat: no-repeat;
-  background-attachment: scroll;
   /* 500px : Modifica distancia desde 0px hacia la derecha 
      200px : Modifica distancia desde 0px hacia abajo*/
   background-position: 500px 200px;

@@ -1,0 +1,35 @@
+div {
+  padding: 50px;
+  width: 100%;
+  height: 400px;
+  background-color: rgb(250, 247, 244);
+}
+
+img {
+  height: 100%;
+  width: 50%;
+  margin: auto;
+  display: block;
+  border-radius: 5px;
+  /*  box-shadow: izq abajo  */
+  box-shadow: 5px 5px 25px 20px rgb(13, 11, 11);
+  padding: 10px;
+  border: 2px solid rgb(195, 191, 191);
+}
+
+/* 
+Para centrar un elemento en horizontal, el elemento tiene que estar en:
+
+display -> block
+
+y se utiliza:
+
+margin -> auto
+*/
+
+
+/* Se recomienda usar porcentajes para height y width, para hacerlo responsive */
+
+
+
+/* https://developer.mozilla.org/es/docs/Web/CSS/box-shadow */
